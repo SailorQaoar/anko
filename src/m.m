@@ -5,7 +5,7 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "/resources/FPMS2.png",
+      "src": "baseline_cake_black_18dp.png",
       "sizes": "41x35",
       "type": "image/png"
     }
