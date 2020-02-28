@@ -28,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { position: 8, name: "Oxygen" },
   { position: 9, name: "Fluorine" },
   { position: 10, name: "Neon" },
-    { position: 11, name: "Hydrogen" },
+  { position: 11, name: "Hydrogen" },
   { position: 12, name: "Helium" },
   { position: 13, name: "Lithium" },
   { position: 14, name: "Beryllium" },
