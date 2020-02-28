@@ -1,0 +1,48 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #616161;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;  
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+tb-icon{color: white !important;}
+
+  
+
+
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+
+td.mat-cell{
+  padding: 0px 5px !important;
+  border-left: 1px lightgray solid;
+  border-collapse: collapse;
+  font-size: 16px !important;
+}
+
+tr:nth-child(odd){
+  background-color: #eee;
+}

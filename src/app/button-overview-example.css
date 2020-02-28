@@ -1,0 +1,29 @@
+
+table {
+  width: 100%;
+}
+.mat-header-cell {
+  padding: 5px;
+    margin: 0px 5px;
+
+}
+
+.scroll-area {
+  
+  width: 100vw;
+  overflow: auto;
+}
+
+.btns-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 2vh;
+  width:auto;
+  height: auto;
+  position: fixed;
+  bottom: 10vh;
+  left: 10vw;
+ margin: 0px auto;
+ color: white !important;
+  background-color: #a0f;
+}
