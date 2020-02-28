@@ -22,7 +22,9 @@ body {
   flex-direction: row;
 }
 
-
+mat-card {
+  margin: 4px;
+}
 
 tb-icon{color: white !important;}
 
@@ -30,8 +32,12 @@ tb-icon{color: white !important;}
 
 
 input {
-  outline: none;
-  border: none;
+  
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px lightgray solid !important;
+  
   background-color: transparent;
 }
 
@@ -46,3 +52,4 @@ td.mat-cell{
 tr:nth-child(odd){
   background-color: #eee;
 }
+

@@ -1,78 +1,22 @@
 <div class="scroll-area" [ngStyle]="{height: getScrollAreaHeight()}">
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+	<ng-container *ngFor="let item of dataSource">
+		<mat-card>
+			<div class="ou-card">
+				<span class="in-card-field">№ {{item.position}} </span>
+				<span class="in-card-field">Name: <input mat-input [(ngModel)]="item.name">  </span>
+				<span class="in-card-field">is custom?: <mat-checkbox [(ngModel)]="item.customStoreCheck"></mat-checkbox>   </span>
+				<span class="in-card-field">Buy price: <input mat-input [(ngModel)]="item.buyPrice"> </span>
+				<span class="in-card-field">Sell price: <input mat-input [(ngModel)]="item.sellPrice"> </span>
+				<span class="in-card-field">Origin: <input mat-input [(ngModel)]="item.origin"> </span>
+				<span class="in-card-field">Link: <input mat-input [(ngModel)]="item.link"> <a href="http://{{item.link}}/"><mat-icon>exit_to_app</mat-icon></a></span>
+				<span class="in-card-field">Buy date: <input mat-input [(ngModel)]="item.buyDate"> </span>
+				<span class="in-card-field">card/paypal: <input mat-input [(ngModel)]="item.cardPaypal"> </span>
+				<span class="in-card-field">Shipped to: <input mat-input [(ngModel)]="item.shippedTo"> </span>
+			</div>
+		</mat-card>
 
-	<!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
 
-	<!-- Position Column -->
-	<ng-container matColumnDef="position">
-		<th mat-header-cell *matHeaderCellDef>№</th>
-		<td mat-cell *matCellDef="let element"> {{element.position}} </td>
 	</ng-container>
-
-	<!-- Name Column -->
-	<ng-container matColumnDef="name">
-		<th mat-header-cell *matHeaderCellDef> position/order<br/> name </th>
-		<td mat-cell *matCellDef="let element"> <input matInput placeholder="name..." [(ngModel)]="element.name"></td>
-	</ng-container>
-
-	<!-- Weight Column -->
-	<ng-container matColumnDef="customStoreCheck">
-		<th mat-header-cell *matHeaderCellDef> Custom/store <br/> check </th>
-		<td mat-cell *matCellDef="let element">
-			<input matInput placeholder="customStoreCheck..." [(ngModel)]="element.customStoreCheck"> </td>
-	</ng-container>
-
-	<!-- Symbol Column -->
-	<ng-container matColumnDef="buyPrice">
-		<th mat-header-cell *matHeaderCellDef> Purchase<br/>price </th>
-		<td mat-cell *matCellDef="let element">
-			<input type="number" placeholder="buy price..." [(ngModel)]="element.buyPrice"> </td>
-	</ng-container>
-
-	<!-- Symbol Column -->
-	<ng-container matColumnDef="sellPrice">
-		<th mat-header-cell *matHeaderCellDef> Sell<br/>price </th>
-		<td mat-cell *matCellDef="let element">
-			<input matInput placeholder="sellPrice..." [(ngModel)]="element.sellPrice"> </td>
-	</ng-container>
-
-	<!-- Symbol Column -->
-	<ng-container matColumnDef="origin">
-		<th mat-header-cell *matHeaderCellDef> Store of<br/>origin </th>
-		<td mat-cell *matCellDef="let element">
-			<input matInput placeholder="origin..." [(ngModel)]="element.origin"> </td>
-	</ng-container>
-
-	<!-- Symbol Column -->
-	<ng-container matColumnDef="link">
-		<th mat-header-cell *matHeaderCellDef> Link </th>
-		<td mat-cell *matCellDef="let element"><input matInput placeholder="link..." [(ngModel)]="element.link"> </td>
-	</ng-container>
-	<!-- Symbol Column -->
-	<ng-container matColumnDef="buyDate">
-		<th mat-header-cell *matHeaderCellDef> Date of<br/>purchase </th>
-		<td mat-cell *matCellDef="let element">
-			<input matInput placeholder="buyDate..." [(ngModel)]="element.buyDate"> </td>
-	</ng-container>
-
-	<!-- Symbol Column -->
-	<ng-container matColumnDef="cardPaypal">
-		<th mat-header-cell *matHeaderCellDef> card/<br/>paypal </th>
-		<td mat-cell *matCellDef="let element">
-			<input matInput placeholder="cardPaypal..." [(ngModel)]="element.cardPaypal"> </td>
-	</ng-container>
-	<!-- Symbol Column -->
-	<ng-container matColumnDef="shippedTo">
-		<th mat-header-cell *matHeaderCellDef> Shipped to </th>
-		<td mat-cell *matCellDef="let element">
-			<input matInput placeholder="shippedTo..." [(ngModel)]="element.shippedTo"> </td>
-	</ng-container>
-
-
-	<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-	<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
 </div>
 <div class="btns-bar" cdkDrag>
 	<mat-icon cdkDragHandle style="color: white !important; margin: auto">drag_indicator</mat-icon>
@@ -80,3 +24,18 @@
 	<button mat-button mat-icon-button><mat-icon style="color: white !important; margin: auto" >clear</mat-icon></button>
 	<button mat-button mat-icon-button><mat-icon style="color: white !important; margin: auto" >filter_list</mat-icon></button>
 </div>
+
+<!--
+
+ "position",
+    "name",
+    "customStoreCheck",
+    "buyPrice",
+    "sellPrice",
+    "origin",
+    "link",
+    "buyDate",
+    "cardPaypal",
+    "shippedTo"
+
+-->

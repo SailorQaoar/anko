@@ -27,3 +27,19 @@ table {
  color: white !important;
   background-color: #a0f;
 }
+
+
+ .in-card-field {
+   border-radius: 4ps;
+   border-left: 1px lightblue solid;
+   padding: 2px;
+   margin: 3px;
+ }
+
+
+
+
+ .ou-card { 
+  display: flex;
+  flex-wrap: wrap;
+ }
