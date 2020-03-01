@@ -9,7 +9,9 @@ table {
 }
 
 .scroll-area {
-  
+  position: fixed;
+  left: 0px;
+top: 0px;
   width: 100vw;
   overflow: auto;
 }
@@ -31,12 +33,20 @@ table {
 
  .in-card-field {
    border-radius: 4ps;
-   border-left: 1px lightblue solid;
+  
    padding: 2px;
    margin: 3px;
  }
 
+ .no-fiele {
 
+   border: 1px lightgray solid;
+ }
+
+.in-card-field input {
+  border-bottom: 1px lightgray solid;
+  min-width: 100px;
+}
 
 
  .ou-card { 

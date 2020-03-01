@@ -6,11 +6,12 @@ import { Component } from "@angular/core";
 
 export interface PeriodicElement {
   name: string;
+  opened?: boolean;
   position?: number;
   customStoreCheck?: string;
   buyPrice?: number;
   sellPrice?: string;
-  origin?: string;
+  comment?: string;
   link?: string;
   buyDate?: string;
   cardPaypal?: string;

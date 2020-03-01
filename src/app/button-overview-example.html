@@ -2,16 +2,22 @@
 	<ng-container *ngFor="let item of dataSource">
 		<mat-card>
 			<div class="ou-card">
-				<span class="in-card-field">№ {{item.position}} </span>
+				<span class="in-card-field no-field"><mat-checkbox></mat-checkbox>№ {{item.position}} </span>
 				<span class="in-card-field">Name: <input mat-input [(ngModel)]="item.name">  </span>
+        <button mat-icon-button (click)="item.opened = !item.opened"><mat-icon>{{item.opened?'expand_less':'expand_more'}}</mat-icon></button>
+        </div>
+        <div class="ou-card" *ngIf="item.opened === true">
 				<span class="in-card-field">is custom?: <mat-checkbox [(ngModel)]="item.customStoreCheck"></mat-checkbox>   </span>
-				<span class="in-card-field">Buy price: <input mat-input [(ngModel)]="item.buyPrice"> </span>
+				
 				<span class="in-card-field">Sell price: <input mat-input [(ngModel)]="item.sellPrice"> </span>
-				<span class="in-card-field">Origin: <input mat-input [(ngModel)]="item.origin"> </span>
-				<span class="in-card-field">Link: <input mat-input [(ngModel)]="item.link"> <a href="http://{{item.link}}/"><mat-icon>exit_to_app</mat-icon></a></span>
-				<span class="in-card-field">Buy date: <input mat-input [(ngModel)]="item.buyDate"> </span>
-				<span class="in-card-field">card/paypal: <input mat-input [(ngModel)]="item.cardPaypal"> </span>
+
+        
+			<span class="in-card-field">card/paypal: <input mat-input [(ngModel)]="item.cardPaypal"> </span>
 				<span class="in-card-field">Shipped to: <input mat-input [(ngModel)]="item.shippedTo"> </span>
+        <span class="in-card-field">Buy price: <input mat-input [(ngModel)]="item.buyPrice"> </span>
+				<span class="in-card-field">Buy date: <input mat-input type="date" [(ngModel)]="item.buyDate"> </span>
+					<span class="in-card-field"><input  matInput placeholder="Link"  [(ngModel)]="item.link"> <a href="http://{{item.link}}/"><mat-icon>exit_to_app</mat-icon></a></span>
+				<span class="in-card-field"><input   matInput placeholder="Comments"  [(ngModel)]="item.comment"> </span>
 			</div>
 		</mat-card>
 
