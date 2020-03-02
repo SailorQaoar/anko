@@ -23,7 +23,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [],
+            "assets": ["manifest.json","./styles","./styles/manifest.json"],
             "styles": [
               "src/styles.scss"
             ],
