@@ -2,7 +2,7 @@ const firebase = require("firebase");
 // Required for side-effects
 require("firebase/firestore");
 
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 export interface PeriodicElement {
   name: string;
@@ -17,6 +17,18 @@ export interface PeriodicElement {
   cardPaypal?: string;
   shippedTo?: string;
 }
+
+const firebaseConfig = {
+  apiKey: "api-key",
+  authDomain: "project-id.firebaseapp.com",
+  databaseURL: "https://project-id.firebaseio.com",
+  projectId: "project-id",
+  storageBucket: "project-id.appspot.com",
+  messagingSenderId: "sender-id",
+  appId: "app-id",
+  measurementId: "G-measurement-id",
+};
+
 
 const ELEMENT_DATA: PeriodicElement[] = [
   { position: 1, name: "Hydrogen" },
@@ -46,7 +58,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: "button-overview-example.html",
   styleUrls: ["button-overview-example.css"]
 })
-export class ButtonOverviewExample {
+export class ButtonOverviewExample implements OnInit {
   displayedColumns: string[] = [
     "position",
     "name",
@@ -61,6 +73,17 @@ export class ButtonOverviewExample {
   ];
   dataSource = ELEMENT_DATA;
   selectedCell: any;
+  db: any;
+ngOnInit(){
+  console.warn('aff test lunch');
+const f = firebase.initializeApp(firebaseConfig);// .then((ires: any)=>{
+  console.warn( f);
+console.warn(firebase);
+this.db = firebase.firestore();
+
+;
+
+}
 
 getScrollAreaHeight(){
   return window.innerHeight.toString()+'px';
